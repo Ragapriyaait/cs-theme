@@ -116,7 +116,7 @@ echo $file;
   }, 10, 3);
 
   // Add install filter
-  add_filter('upgrader_post_install', function($response, $hook_extra, $result) use($file) {
+  add_filter('upgrader_process_complete', function($response, $hook_extra, $result) use($file) {
     global $wp_filesystem;
     $install_directory =  get_stylesheet_directory_uri($file);
     $wp_filesystem->move( $result['destination'], $install_directory);
