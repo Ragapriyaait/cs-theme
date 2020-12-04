@@ -78,7 +78,7 @@ echo $file;
         }
       }
     }
-    print_r($transient);exit;
+    
     return $transient;
   }, 10, 1 );
 
