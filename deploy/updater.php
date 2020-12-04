@@ -61,7 +61,7 @@ echo $file;
   });
 
   // Add update filter
-  add_filter('pre_set_site_transient_update_themes', function($transient) use ($file, $version) {
+  add_filter('site_transient_update_themes', function($transient) use ($file, $version) {
     if($transient && property_exists( $transient, 'checked') ) {
       if( $checked = $transient->checked && isset($GLOBALS['wpme_aff_plugin'])) { 
         $version = $version === null ? wpme_cs_theme_get_github_version() : $version;
