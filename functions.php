@@ -58,9 +58,7 @@ return $url;
 }
 add_filter( 'login_redirect', 'user_login_redirect', 10, 3 );
 //require_once(get_stylesheet_directory_uri().'/deploy/updater.php' );
-require_once('C:/xampp/htdocs/lifter/wp-content/themes/twentynineteen-child/deploy/updater.php');
-
-wpme_cs_theme_updater_init(__FILE__);
+require_once('C:/xampp/htdocs/lifter/wp-content/themes/twentynineteen-child/updater.php');
 
 
 
